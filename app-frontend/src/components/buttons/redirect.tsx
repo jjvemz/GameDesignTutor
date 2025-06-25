@@ -1,8 +1,16 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
-const RedirectButton = () => {
+const RedirectButton = (redirectPage: string, label?:string, className?: string) => {
+    const navigate = useNavigate();
+
+    const handleRedirect= () =>{
+        navigate(redirectPage);
+    }
   return (
-    <button>RedirectButton</button>
+    <button onClick={handleRedirect} className={className}>
+        {label}
+    </button>
   )
 }
 
