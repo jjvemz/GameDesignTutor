@@ -4,20 +4,20 @@ import {
   Route,
 } from "react-router-dom";
 import './App.css';
-import About from "./pages/About";
-import Home from "./pages/Home";
-import Tutor from "./pages/Tutor";
 import NotFound from "./pages/NotFound";
-import Pricing from "./pages/Pricing";
+import Homelayout from "./Layout/Home/Homelayout";
+import PricingLayout from "./Layout/Pricing/PricingLayout";
+import AboutLayout from "./Layout/About/AboutLayout";
+import TutorLayout from "./Layout/Tutor/TutorLayout";
 
 function App() {
   return (
     <Router>
       <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="/pricing" element={<Pricing />}/>
-          <Route path="/about" element={<About />}/>
-          <Route path="/tutor" element={<Tutor />}/>
+          <Route path="/" element={<Homelayout />}/>
+          <Route path="/pricing" element={<PricingLayout />}/>
+          <Route path="/about" element={<AboutLayout />}/>
+          <Route path="/tutor" element={<TutorLayout />}/>
           <Route path="*"element={<NotFound />}/>
         </Routes>
     </Router>

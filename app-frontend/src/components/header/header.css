@@ -1,5 +1,8 @@
 .site-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    z-index: 1000;
+    transition: top 0.3s;
 }
