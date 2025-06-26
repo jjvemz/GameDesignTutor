@@ -8,7 +8,7 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Tutor from "./pages/Tutor";
 import NotFound from "./pages/NotFound";
-import Pricing from "./pages/pricing";
+import Pricing from "./pages/Pricing";
 
 function App() {
   return (
