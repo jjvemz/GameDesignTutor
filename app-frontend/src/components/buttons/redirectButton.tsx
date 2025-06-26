@@ -2,7 +2,13 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button  } from "nes-ui-react";
 
-const RedirectButton = (redirectPage: string, label?:string,) => {
+interface RedirectButtonProps {
+  redirectPage: string;
+  label?: string | null;
+}
+
+
+const RedirectButton: React.FC<RedirectButtonProps> = ({ redirectPage, label }) => {
     const navigate = useNavigate();
 
     const handleRedirect= () =>{
@@ -10,7 +16,7 @@ const RedirectButton = (redirectPage: string, label?:string,) => {
     }
   return (
     <Button color="primary" onClick={handleRedirect} >
-        {label}
+        {label ?? ''}
     </Button>
   )
 }
