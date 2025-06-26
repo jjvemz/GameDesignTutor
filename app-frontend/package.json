@@ -6,7 +6,7 @@
     "nes-ui-react": "^0.3.0",
     "nes.css": "^2.3.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.2",
     "vite": "^6.3.5",
     "web-vitals": "^5.0.1"
@@ -18,7 +18,7 @@
     "@types/jest": "^30.0.0",
     "@types/node": "^24.0.3",
     "@types/react": "^18.3.13",
-    "@types/react-dom": "^18.3.1",
+    "@types/react-dom": "^19.1.6",
     "@vitejs/plugin-react": "^4.6.0",
     "jsdom": "^26.1.0",
     "typescript": "^5.8.3",
