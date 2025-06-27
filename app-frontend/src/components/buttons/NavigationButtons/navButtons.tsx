@@ -1,6 +1,6 @@
 import React from 'react';
 import { navButtons } from "../../../data/buttons/navButtons";
-import RedirectButton from "../redirectButton";
+import RedirectButton from "../RedirectButton/redirectButton";
 
 const NavButtons: React.FC = () => {
   return (
