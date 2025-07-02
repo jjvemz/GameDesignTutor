@@ -4,22 +4,25 @@ import {
   Route,
 } from "react-router-dom";
 import './App.css';
-import NotFound from "./pages/NotFound";
-import Homelayout from "./Layout/Home/Homelayout";
-import PricingLayout from "./Layout/Pricing/PricingLayout";
-import AboutLayout from "./Layout/About/AboutLayout";
-import TutorLayout from "./Layout/Tutor/TutorLayout";
+import { routes } from "./routes/route";
+import { Suspense } from "react";
 
 function App() {
   return (
     <Router>
       <Routes>
-          <Route path="/" element={<Homelayout />}/>
-          <Route path="/pricing" element={<PricingLayout />}/>
-          <Route path="/about" element={<AboutLayout />}/>
-          <Route path="/tutor" element={<TutorLayout />}/>
-          <Route path="*"element={<NotFound />}/>
-        </Routes>
+        {routes.map(({ path, element, lazy }) => {
+          const routeElement = lazy ? (
+            <Suspense fallback={<div>Loading...</div>}>
+              {element}
+            </Suspense>
+          ) : (
+            element
+          );
+
+          return <Route key={path} path={path} element={routeElement} />;
+        })}
+      </Routes>
     </Router>
   );
 }
